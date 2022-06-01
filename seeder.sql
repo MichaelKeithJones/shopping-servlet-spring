@@ -18,7 +18,7 @@ INSERT INTO categories (name) VALUES
 ('Category 4'),
 ('None');
 
-INSERT INTO items_categories (item_id, category_id) VALUES
+INSERT INTO item_category (item_id, category_id) VALUES
 (1, 1),
 (1, 2),
 (1, 4),
