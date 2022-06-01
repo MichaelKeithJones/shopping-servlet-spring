@@ -4,12 +4,9 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/home")
-class HomeController {
-
-    @GetMapping
-    public String welcome() {
-        return "home";
+public class LoginController {
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login";
     }
-
 }
