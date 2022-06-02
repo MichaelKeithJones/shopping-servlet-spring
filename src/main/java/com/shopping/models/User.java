@@ -25,6 +25,9 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<UserProduct> user_product;
 
+    @OneToMany(mappedBy = "user")
+    private List<UserAuthority> user_authority;
+
     public User() {}
     public User(String username, String email, String password, String profile_image_url, List<UserProduct> user_product) {
         this.id = id;
@@ -83,5 +86,12 @@ public class User {
     }
     public void setUser_product(List<UserProduct> user_product) {
         this.user_product = user_product;
+    }
+
+    public List<UserAuthority> getUser_authority() {
+        return user_authority;
+    }
+    public void setUser_authority(List<UserAuthority> user_authority) {
+        this.user_authority = user_authority;
     }
 }

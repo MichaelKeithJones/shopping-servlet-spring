@@ -1,5 +1,9 @@
 USE shopspring_db;
 
+INSERT INTO authorities (name) VALUES
+('ADMIN'),
+('USER');
+
 INSERT INTO items (name) VALUES
 ('Unbelievable'),
 ('Clearness'),
