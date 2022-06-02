@@ -42,7 +42,7 @@ public class CustomSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .and()
                 .authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority("ADMIN")
-                .antMatchers("/login*", "/sign-up*").anonymous()
+                .antMatchers("/login*", "/register*").anonymous()
                 .anyRequest().authenticated()
             .and()
                 .csrf()

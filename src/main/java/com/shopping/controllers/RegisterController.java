@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.security.crypto.password.*;
 
 @Controller
+@RequestMapping("/register")
 public class RegisterController {
 
     private UserRepository userDao;
@@ -19,13 +20,13 @@ public class RegisterController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping("/sign-up")
+    @GetMapping
     public String showSignupForm(Model model){
         model.addAttribute("user", new User());
-        return "sign-up";
+        return "register";
     }
 
-    @PostMapping("/sign-up")
+    @PostMapping("/register")
     public String saveUser(@ModelAttribute User user){
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
