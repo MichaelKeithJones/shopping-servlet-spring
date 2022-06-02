@@ -3,7 +3,7 @@ package com.shopping.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="user_authority")
+@Table(name="user_authority", uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "authority_id"}))
 public class UserAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
